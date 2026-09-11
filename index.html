@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KARTECH Mühendislik</title>
+  <meta name="description" content="KARTECH Mühendislik - Fikirden üretime, kalıp çözümleri. Web sitemiz yapım aşamasındadır.">
+  <meta name="theme-color" content="#020b13">
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #020b13; }
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* DESKTOP / TABLET */
+    .desktop-site { display: block; }
+    .desktop-site img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* MOBILE */
+    .mobile-site { display: none; }
+
+    @media (max-width: 720px) {
+      .desktop-site { display: none; }
+      .mobile-site {
+        display: block;
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(2,11,19,.18) 0%, rgba(2,11,19,.82) 49%, #020b13 72%),
+          url("kartech-site.png") center top / auto 58vh no-repeat,
+          #020b13;
+      }
+
+      .mobile-wrap {
+        min-height: 100vh;
+        padding: max(22px, env(safe-area-inset-top)) 20px 30px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand {
+        margin-top: 8px;
+        font-size: clamp(29px, 8.5vw, 42px);
+        font-weight: 800;
+        letter-spacing: .02em;
+        text-shadow: 0 2px 16px rgba(0,0,0,.75);
+      }
+
+      .brand span {
+        display: block;
+        margin-top: 2px;
+        font-size: .43em;
+        font-weight: 500;
+        letter-spacing: .42em;
+        color: #d9e6ef;
+      }
+
+      .accent {
+        width: 54px;
+        height: 4px;
+        border-radius: 4px;
+        background: #00a8ff;
+        margin: 16px 0 13px;
+        box-shadow: 0 0 14px rgba(0,168,255,.65);
+      }
+
+      .tagline {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.45;
+        color: #e4edf3;
+        text-shadow: 0 2px 10px rgba(0,0,0,.8);
+      }
+
+      .spacer { height: 29vh; min-height: 190px; }
+
+      .status-card {
+        margin-top: auto;
+        background: rgba(3, 16, 27, .88);
+        border: 1px solid rgba(84, 181, 255, .26);
+        border-radius: 20px;
+        padding: 22px 18px 18px;
+        box-shadow: 0 18px 46px rgba(0,0,0,.35);
+        backdrop-filter: blur(8px);
+      }
+
+      .status {
+        margin: 0;
+        text-align: center;
+        font-size: clamp(22px, 6.1vw, 30px);
+        line-height: 1.08;
+        font-weight: 800;
+        letter-spacing: .025em;
+      }
+
+      .soon {
+        margin: 10px 0 20px;
+        text-align: center;
+        color: #b9cad5;
+        font-size: 14px;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .service {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 8px;
+        border-radius: 12px;
+        border: 1px solid rgba(0,168,255,.22);
+        background: linear-gradient(180deg, rgba(12,31,44,.9), rgba(5,18,29,.92));
+        color: #eef8ff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.24;
+      }
+
+      .service:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .footer-line {
+        margin-top: 17px;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: .16em;
+        color: #718897;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .mobile-wrap { padding-left: 14px; padding-right: 14px; }
+      .service { font-size: 11px; }
+      .spacer { min-height: 165px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="desktop-site" aria-label="KARTECH Mühendislik">
+      <img src="kartech-site.png" alt="KARTECH Mühendislik - Web sitemiz yapım aşamasındadır">
+    </section>
+
+    <section class="mobile-site" aria-label="KARTECH Mühendislik mobil görünüm">
+      <div class="mobile-wrap">
+        <div class="brand">
+          KARTECH
+          <span>MÜHENDİSLİK</span>
+        </div>
+        <div class="accent"></div>
+        <p class="tagline">Fikirden üretime → Kalıp Çözümleri</p>
+
+        <div class="spacer" aria-hidden="true"></div>
+
+        <div class="status-card">
+          <h1 class="status">WEB SİTEMİZ<br>YAPIM AŞAMASINDADIR</h1>
+          <p class="soon">Çok yakında hizmetinizdeyiz.</p>
+
+          <div class="services">
+            <div class="service">SAC METAL<br>KALIPLARI</div>
+            <div class="service">PLASTİK ENJEKSİYON<br>KALIPLARI</div>
+            <div class="service">ALÜMİNYUM ENJEKSİYON<br>KALIPLARI</div>
+            <div class="service">TASARIM</div>
+            <div class="service">TERSİNE MÜHENDİSLİK</div>
+            <div class="service">3D TARAMA</div>
+            <div class="service">3D BASKI</div>
+          </div>
+
+          <div class="footer-line">TASARIM • TEKNOLOJİ • ÜRETİM</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
